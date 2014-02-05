@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/assets/css/bootstrap.css" rel="stylesheet">
+		<link href="/assets/css/custom.css" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+		<title>Create Configuration</title>
+		</head>
+		<body>
+
+			<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="/">Androsign CMS</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="/">Home</a>
+							</li>
+							<li class="active">
+								<a href="createConfig.php">Create</a>
+							</li>
+							<li>
+								<a href="api.php">API</a>
+							</li>
+							<li>
+								<a href="logout.php">Logout</a>
+							</li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+
+			<div class="container" id="newConfig" >
+				<form class="form-signin" id="newConfigForm" method="post" name="newConfigForm">
+					<h3 class="form-signin-heading">New Configuration</h3>
+					<label for="configName">Configuration name</label>
+					<input id="configName" type="text" placeholder="it_dept_config" name="configName">
+					<br>
+					<label for="rssURL">RSS feed URL</label>
+					<input type="text" id="rssURL" placeholder="http://dir.yahoo.com/rss/dir/getrss.php?reg_us" name="rssURL">
+					<br>
+					<label for="watermarkURL">URL for watermark image</label>
+					<input type="text" id="watermarkURL" placeholder="http://flickr.com/img124.jpg" name="wmURL">
+					<br>
+					<label for="webcontentURL">URL for web view</label>
+					<input type="text" id="webcontentURL" placeholder="http://slideshow.sage.edu/demo/www/demo.html" name="webContentURL">
+					<br>
+					<label for="weatherCB">Display weather</label>
+					<input type="checkbox" id="weatherCB" name="options" value="weather">
+					<br>
+					<label for="clockCB">Display clock</label>
+					<input type="checkbox" id="clockCB" name="options" value="clock">
+					<br>
+					<label for="rotation">App rotation</label>
+					<select class="form-control" id="rotation" name="rotation">
+						<option value="0">0&deg;</option>
+						<option value="90">90&deg;</option>
+						<option value="180">180&deg;</option>
+						<option value="270">270&deg;</option>
+					</select>
+					<br>
+					<label for="trans">Background Transition Time</label>
+					<select class="form-control" id="trans" name="trans">
+						<option value="5">5</option>
+						<option value="10">10</option>
+						<option value="15">15</option>
+						<option value="20">20</option>
+						<option value="25">25</option>
+						<option value="30">30</option>
+						<option value="60">60</option>
+					</select>
+					<br>
+					<input class="btn btn-medium btn-secondary" id="cancelConfButt" type="button" value="Cancel" onclick="returnIndex()" />
+					<input class="btn btn-medium btn-primary" id="saveConfButt" type="button" value="Save" onclick="saveConfig('configName', 'rssURL', 'watermarkURL', 'webcontentURL', 'weatherCB', 'clockCB', 'trans','rotation')" />
+				</form>
+			</div>
+			<script src="/assets/js/functions.js"></script>
+			<script src="/assets/js/jquery.js"></script>
+			<script src="/assets/js/bootstrap.js"></script>
+			<script src="/assets/js/bootstrap.min.js"></script>
+		</body>
+</html>

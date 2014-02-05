@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/assets/css/bootstrap.css" rel="stylesheet">
+		<link href="/assets/css/custom.css" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+		<title>Androsign CMS</title>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Androsign CMS</a>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<form class="form-signin" action="includes/process_login.php" method="post" name="login_form">
+				<h2 class="form-signin-heading">Sign in</h2>
+				<label for="email">Email Address</label>
+				<input id="email" type="text" name="email" />
+				<br>
+				<label for="password">Password</label>
+				<input type="password"
+				id="password"
+				name="password"
+				id="password"/>
+				<br>
+
+				<input value="Register"
+				type="button"
+				onclick="location.href='register.php'"
+				class="btn btn-medium btn-secondary" />
+
+				<input type="submit"
+				value="Login"
+				class="btn btn-medium btn-primary"
+				onclick="formhash(this.form, this.form.password);" />
+			</form>
+		</div>
+		<script src="/assets/js/sha512.js"></script>
+		<script src="/assets/js/forms.js"></script>
+		<script src="/assets/js/jquery.js"></script>
+		<script src="/assets/js/bootstrap.js"></script>
+		<script src="/assets/js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+body {
+	padding-top: 50px;
+	background-color: #f1f1f1;
+}
+.custom {
+	padding: 40px 15px;
+	text-align: center;
+}
+.form-signin {
+	max-width: 300px;
+	padding: 19px 29px 29px;
+	margin: 0 auto 20px;
+	background-color: #fbfbfb;
+	border: 3px solid #7c7c7c;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-signin .form-signin-heading, .form-signin .checkbox {
+	margin-bottom: 10px;
+}
+.form-signin input[type="text"], .form-signin input[type="password"] {
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+
+.btn-file {
+	position: relative;
+	overflow: hidden;
+}
+.btn-file input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 100%;
+	min-height: 100%;
+	font-size: 999px;
+	text-align: right;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	background: red;
+	cursor: inherit;
+	display: block;
+}
+
+.tbl-background {
+	background-color: #fbfbfb;
+	border: 13px solid #7c7c7c;
+}
+#preview img {
+	max-height: 300px;
+	max-width: 300px;
+}
