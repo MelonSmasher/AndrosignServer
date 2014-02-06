@@ -14,6 +14,17 @@ function showConfigs() {
 	}
 }
 
+function windDir($winddir) {
+	// Given the wind direction, return the text label
+	// for that value.  16 point compass
+	if (!isset($winddir)) {
+		return "---";
+	}
+	$windlabel = array("N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW");
+	$dir = $windlabel[fmod((($winddir + 11) / 22.5), 16)];
+	return "$dir";
+}
+
 function showPictures($user) {
 	$dir = "upload/" . "$user" . "/";
 	if (is_dir($dir)) {
@@ -50,6 +61,11 @@ if ($_GET['kind'] == 'photo') {
 		}
 
 	}
+} else if ($_GET['kind'] == 'wind') {
+	$deg = $_GET['deg'];
+	$dir['Direction'] = array(windDir($deg));
+	echo json_encode($dir);
+
 } else {
 	showConfigs();
 }
